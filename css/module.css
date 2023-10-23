@@ -1,0 +1,300 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #024a7a, #055a53);
+    height: 110vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.form {
+    width: 450px;
+    height: 540px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #8a8484;
+    border-radius: 5px;
+    margin-top: -3.9em;
+    margin-left: 30em;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 18em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border: none;
+    margin-left: -0.3em;
+    border-radius: 3px;
+}
+
+.error-icon,
+.valid-icon {
+    display: none;
+    color: red;
+}
+
+button {
+    width: 100%;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    margin-top: 1.5em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-signup:hover{
+  color: #000;
+  background: #ccc;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.form-title{
+ color: #3498db;
+  font-size: 1.5em;
+    text-align: center;
+    margin-top: -0.5em;
+}
+
+.account{
+    display: flex;
+    text-align: center;
+    margin-left: 1em;
+}
+
+.account p{
+    font-size: 12px;
+    width: 230px;
+}
+
+.account-link{
+    margin-top: 0.5em;
+    margin-left: -2em;
+    width: 100px;
+}
+
+.account-link .link{
+    font-size: 14px;
+}
+
+.account-link .link:hover{
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* Google Button */
+.btn-container{
+    margin-top: 1.5em;
+}
+.button {
+    max-width: 320px;
+    display: flex;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    gap: 0.75rem;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .6s ease;
+  }
+  
+  .button svg {
+    height: 24px;
+  }
+  
+  button:hover {
+    transform: scale(1.02);
+    background: transparent;
+  }
+
+ 
+
+  /* Custom Tooltip */
+  .tooltip {
+    position:relative; /* making the .tooltip span a container for the tooltip text */
+    /* little indicater to indicate it's hoverable */
+  }
+
+  .tooltip:before {
+    content: attr(data-text); /* here's the magic */
+    position:absolute;
+    
+    /* vertically center */
+    top:50%;
+    transform:translateY(-50%);
+    
+    /* move to right */
+    left:100%;
+    margin-left:15px; /* and add a small left margin */
+    
+    /* basic styles */
+    width:200px;
+    padding:10px;
+    border-radius:10px;
+    background:#02A597;
+    color: #fff;
+    text-align:center;
+  
+    display:none; /* hide by default */
+  }
+
+  .tooltip:hover:before {
+    display:block;
+  }
+
+  /* Preloader */
+.wrapper{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    opacity: 1;
+    z-index: 9999;
+  }
+  
+  
+  .custom-loader {
+    width:50px;
+    height:50px;
+    color: #02a597;
+    --c:radial-gradient(farthest-side,#02a597 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+  }
+  @keyframes s7 {
+    to{
+        transform: rotate(.5turn)
+    }
+  }
+  
+
+  .btn-clear:hover{
+    color: #fff;
+   background: #02A597;
+  }
+
+
+  .back-link{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-back {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+   
+.btn-back > .svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+.btn-back:hover > .svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+.btn-back:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+
+
+  @media (max-width:800px){
+    body{
+      height: 100vh;
+      width: auto;
+    }
+    .form-title{
+        color: #3498db;
+    }
+    input{
+        color: #000000;
+        background: #e9e6e6;
+        margin-left: 0.7em;
+        width: 18em;
+    }
+    label{
+      margin-left: 0.7em;
+    }
+   /* Custom Tooltip */
+  .tooltip {
+    position:relative; /* making the .tooltip span a container for the tooltip text */
+    /* little indicater to indicate it's hoverable */
+  }
+
+  .tooltip:before {
+    /* vertically center */
+    top:10%;
+    transform:translateY(-50%);
+    /* move to right */
+    left:20%;
+    margin-left:15px; /* and add a small left margin */
+    /* basic styles */
+    width:200px;
+    padding:5px;
+    border-radius:10px;
+    background:#02A597;
+    color: #fff;
+    text-align:center;
+    display:none; /* hide by default */
+  }
+  .button{
+    margin-left: 0.4em;
+  }
+  .form {
+    margin-left: 0;
+    height: 73vh;
+  }
+  .btn-clear{
+    width: 19.7em;
+    margin-left: 0.5em;
+  }
+  .btn-signup{
+    width: 19.7em;
+    margin-left: 0.5em;
+  }
+
+  }

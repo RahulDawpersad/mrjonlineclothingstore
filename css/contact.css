@@ -1,0 +1,436 @@
+html {
+	height: 100%;
+}
+body {
+	background: #ffffff;
+	background-size: cover;
+	font-family: 'Roboto';
+	box-sizing: border-box;
+	padding: 40px;
+	
+}
+h1 {
+	color: #444;
+	font-weight: 300;
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 25px;
+}
+h3{
+    color: #05E0CE;
+    font-weight: bolder;
+    text-align: center;
+}
+.sub {
+	color: #999;
+	text-transform: uppercase;
+	display: block;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+/* End of basic info */
+
+.input-block {
+	display: block;
+	max-width: 650px;
+	margin: auto;
+    color: #ffffff;
+	border-radius: 10px;
+	margin-top: -2em;
+	text-align: left;
+	background: #162E47;
+	padding: 40px 30px;
+	box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.1);
+}
+
+.hidden{
+	opacity: 0; /*Making the elements visible*/
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 1.5s;
+  }
+  
+  .show{
+	opacity: 1; /*will bring the opacity back to 1 */
+	filter: blur(0);
+	transform: translateX(0);
+  }
+
+/* Copy this style form on your website */
+
+.links {
+	margin-top: 60px;
+	text-align: center;
+}
+.links .item {
+	background: #4485c5;
+	color: #fff;
+	width: 49px;
+	height: 49px;
+	border-radius: 50%;
+	position: relative;
+	z-index: 5;
+	text-align: center;
+	
+}
+.links .item i {
+	font-size: 30px;
+	padding-top: 10px;
+	z-index: 888;
+	position: relative;
+}
+.links a {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	border-radius: 50px 50px ;
+	overflow: hidden;
+	transform: translateX(52px);
+	transition: .3s
+}
+.links .follow {
+	position: absolute;
+	left: -100px;
+	top: -1px;
+	visibility: hidden;
+	background: #4485c5;
+/* 	height: 50px; */
+	width: 100px;
+/* 	opacity: 0; */
+	color: #fff;
+	padding: 17px 0;
+	font-size: 14px;
+	padding-left: 20px ;
+	transition: .3s;
+	border-radius: 50px 50px;
+}
+.links a:hover .follow {
+	left: 10px;
+	transition: .3s;
+	opacity: 1;
+	visibility: visible;
+	
+	
+}
+.links a:hover {
+	transform: translateX(10px);
+	transition: .3s
+
+}
+
+.foot {
+	font-size: 14px;
+	text-transform: normal;
+	color: #777;
+	margin-top: 20px;
+	text-align: center;
+}
+.foot a {
+	text-decoration: none;
+	color: #777;
+}
+
+/*  */
+h3 {
+	font-size: 20px;
+	margin: 10px 0;
+	font-weight: 400;
+}
+
+/* wraps */
+
+.wrap-line {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.wrap-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* end wraps */
+
+
+/* Inputs style */
+
+.brise-input {
+	width: 300px;
+	position: relative;
+	margin: 5px;
+	overflow: hidden;
+	padding-top: 15px;
+}
+.brise-input input {
+    color: #fff;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #999;
+	box-sizing: border-box;
+	font-size: 16px;
+    font-weight: bold;
+	position: relative;
+	z-index: 5;
+	background: none;
+}
+.brise-input input:focus ~ label, input:valid ~ label  {
+	top: 0px;
+	transform: scale(0.94) translateX(-2px);
+	color: #05E0CE;
+}
+.brise-input .line {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	background: #05E0CE;
+	left: -999px;
+	transition: .25s;
+	opacity: 0;
+	z-index: 6;
+}
+.brise-input input:focus ~ .line {
+	left: 0;
+	opacity: 1;
+}
+.brise-input label {
+	position: absolute;
+	left: 10px;
+	top: 45%;
+	transition: ease-out .15s;
+	color: #999;
+}
+
+/* End Inputs */
+
+
+/* Textarea style */
+
+.brise-text {
+	margin: 5px;
+    margin-left: 0.1em;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	padding-top: 15px;
+}
+.brise-text textarea {
+	width: 100%!important;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border: 1px solid #05E0CE;
+    color: #fff;
+	box-sizing: border-box;
+	font-size: 16px;
+	position: relative;
+	z-index: 5;
+	background: none;
+    resize: none;
+}
+.brise-text label {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	color: #999;
+	opacity: 1;
+	transition: .15s;
+}
+.brise-text textarea:focus ~ label, textarea:valid ~ label {
+	opacity: 0;
+}
+/* End Textarea */
+
+
+/* Checkbox style */
+
+.brise-checkbox {
+	display: inline-block;
+	margin: 5px;
+}
+.brise-checkbox label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	color: #999;
+}
+.brise-checkbox label input {
+	display: none;
+}
+.brise-checkbox label .checkbox {
+	display: block;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #999;
+	margin-right: 10px;
+	transition: .15s;
+	position: relative;
+}
+.brise-checkbox label .checkbox::before {
+	content: '';
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	bottom: 3px;
+	right: 3px;
+	width: 11px;
+	height: 11px;
+	background: #4485c5;
+	opacity: 0;
+	transform: scale(1.5);
+	transition: ease-out .15s
+	
+}
+.brise-checkbox label input:checked ~ .checkbox::before {
+	transform: scale(1);
+	opacity: 1;
+}
+.brise-checkbox label input:checked ~ .label {
+	color: #4485c5;
+}
+.brise-checkbox label input:checked ~ .checkbox{
+	border: 1px solid #4485c5;
+}
+
+/* End Checkbox */
+
+/* Radio Style */
+
+.brise-radio {
+	display: inline-block;
+	margin: 5px;
+}
+.brise-radio label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	color: #999;
+}
+.brise-radio label input {
+	display: none;
+}
+.brise-radio label .radio {
+	display: block;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #999;
+	border-radius: 50%;
+	margin-right: 10px;
+	transition: .15s;
+	position: relative;
+}
+.brise-radio label .radio::before {
+	content: '';
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	bottom: 3px;
+	right: 3px;
+	width: 11px;
+	height: 11px;
+	background: #4485c5;
+	border-radius: 50%;
+	opacity: 0;
+	transform: scale(1.5);
+	transition: ease-out .15s
+	
+}
+.brise-radio label input:checked ~ .radio::before {
+	transform: scale(1);
+	opacity: 1;
+}
+.brise-radio label input:checked ~ .label {
+	color: #4485c5;
+}
+.brise-radio label input:checked ~ .radio{
+	border: 1px solid #4485c5;
+}
+/* End Radio */
+
+/* Upload style */
+
+.brise-upload label, .brise-btn {
+	margin: 10px 0;
+	margin-bottom: 10px;
+	width: auto;
+	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	background: #4485c5;
+	font-size: 16px;
+	padding: 8px 20px;
+	transition: .15s;
+	border: none;
+}
+.brise-upload label:hover,.brise-btn:hover{
+	background: #05E0CE;
+	transition: .15s;
+} 
+.brise-upload label input {
+	display: none;
+}
+.brise-btn {
+	font-size: 20px;
+	padding: 10px 40px;
+}
+
+.icon-container{
+	margin-left: -0.3em;
+}
+
+.wrapper{
+	background: #fff;
+	height: 100vh;
+	inset: 0;
+	position: fixed;
+	z-index: 9999;
+	display: grid;
+	place-items: center;
+}
+
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {    
+    content:"";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side,#766DF4 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin:4px;
+  filter:hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes s2{ 
+  100%{transform: rotate(.5turn)}
+}
+/* End upload */
+
+@media (max-width:800px){
+    body{
+        background: #162E47;
+    }
+    .input-block {
+       width: 17em;
+       margin-left: -1.3em;
+    }
+}

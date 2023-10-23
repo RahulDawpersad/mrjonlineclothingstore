@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <script src="https://kit.fontawesome.com/655b3b7e45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+  <body>
+<div class="wrapper">
+  <div class="custom-loader"></div>
+</div>
+   
+<div class="icon-container">
+  <a href="../index.html">
+    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+  </a>
+</div>
+    
+    <div class="input-block">
+    <!-- 	Copy this form on your website -->
+	<form id="brise-form" action="#" method="post">
+        <h3>MRJ Contact</h3>
+        <div class="wrap-line">
+            <!-- Inputs -->
+            <div class="brise-input">
+                <input type="text" name="text" id="fname" required>
+                <label>Name</label>
+                <span class="line"></span>
+            </div>
+            <div class="brise-input">
+                <input type="email" name="email" id="email" required>
+                <label>Email</label>
+                <span class="line"></span>
+            </div>
+            <div class="brise-input">
+                <input type="tel" name="phone" id="phone" required>
+                <label>Phone Number</label>
+                <span class="line"></span>
+            </div>
+            <!-- Inputs -->
+        </div>
+        <h3>Comment</h3>
+        <!-- Textarea -->
+        <div class="brise-text">
+            <textarea name="msg" cols="30" rows="10" required></textarea>
+            <label>Message</label>
+        </div>
+        
+        <button class="brise-btn" id="btn-submit">Submit</button>
+    </form>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>

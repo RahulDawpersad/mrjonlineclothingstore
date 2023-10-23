@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRJ- Sign Up</title>
+    <!-- Link to Font Awesome -->
+    <script src="https://kit.fontawesome.com/655b3b7e45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="custom-loader"></div>
+    </div>
+
+
+       <div id="login-form" class="form">
+
+            <!-- Back icon -->
+            <div class="back-icon-wrapper">
+               <a href="signup.html">
+                <i class="fa-solid fa-arrow-left"></i>
+               </a>
+            </div>
+
+
+            <h1 class="form-title">Login</h1>
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <div class="icon-container">
+            <div id="email-error" class="error-icon">❌</div>
+            <div id="email-valid" class="valid-icon">✅</div>
+        </div>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <div class="pass-container">
+            <div id="password-error" class="error-icon">❌</div>
+            <div id="password-valid" class="valid-icon">✅</div>
+        </div>
+        <input type="checkbox" id="Show">Show Password
+        
+        <br>
+
+        <button id="btn-signup" disabled>Login</button>
+        <button id="btn-clear" class="btn-clear">Clear</button>
+    </div>
+
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/form.js"></script>
+</body>
+</html>

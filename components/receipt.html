@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipt</title>
+    <script src="https://kit.fontawesome.com/655b3b7e45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/receipt.css" />
+  </head>
+  <body>
+
+   <!-- Preloader -->
+     <div class="wrapper">
+      <div class="custom-loader"></div>
+  </div> 
+  
+    <!-- Back Icon -->
+     <div class="link-container">
+      <a href="./store.html" class="link">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+     </div>
+
+
+    <div id="receipt-container" class="receipt-item-wrap">
+      <!-- JavaScript will populate the receipt here -->
+    </div>
+
+    <div class="btn-container" >
+      <!-- <button id="print-receipt">Print Receipt</button> -->
+      <button class="print-button" id="print-receipt"  title="Print Receipt">
+        <span class="print-icon"></span>
+      </button>
+       
+      <!-- Download Button -->
+      <button class="cssbuttons-io-button" id="download-receipt">
+        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z" fill="currentColor"></path></svg>
+        <span>Download</span>
+      </button>
+      
+    </div>
+
+     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="../js/receipt.js"></script>
+  </body>
+</html>

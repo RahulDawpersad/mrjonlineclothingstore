@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,600&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #1C354E, #3A586E);
+  height: 100vh;
+}
+
+.receipt-item-wrap{
+  display: grid;
+  place-items: center;
+  margin: 1em 1em;
+}
+
+.receipt-item-wrap h1{
+  color: #05E0CE;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0 0.9em;
+}
+
+.receipt-item-wrap p{
+  color: #ebe5e5;
+  margin: 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.link-container{
+  margin-left: 1.5em;
+  margin-top: 2em;
+  font-size: 1.2em;
+}
+
+.link-container .link{
+  text-decoration: none;
+}
+
+.fa-solid{
+  color: #aaa;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2em;
+    margin-top: 7em;
+}
+
+/* Download button */
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  margin: 1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, #02a597 0%, #05E0CE 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #1C354E;
+  letter-spacing: 0.05em;
+  border: none;
+  border-radius: 20em;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  background:  #1C354E;
+}
+
+/* .cssbuttons-io-button:active {
+  background:  #05E0CE;
+} */
+
+
+
+
+/* Print Button */
+button.print-button {
+    width: 100px;
+    height: 100px;
+    margin-top: -0.1em;
+  }
+  span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+    border: solid 4px #05E0CE;
+  }
+  span.print-icon::after {
+    border-width: 2px;
+  }
+  
+  button.print-button {
+    position: relative;
+    padding: 0;
+    border: 0;
+    
+    border: none;
+    background: transparent;
+  }
+  
+  span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  
+  span.print-icon {
+    position: relative;
+    display: inline-block;  
+    padding: 0;
+    margin-top: 20%;
+  
+    width: 60%;
+    height: 35%;
+    background: #fff;
+    border-radius: 20% 20% 0 0;
+  }
+  
+  span.print-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 12%;
+    right: 12%;
+    height: 110%;
+  
+    transition: height .2s .15s;
+  }
+  
+  span.print-icon::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 12%;
+    right: 12%;
+    height: 0%;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: 70% 90%;
+    background-position: center;
+    background-image: linear-gradient(
+      to top,
+      #fff 0, #fff 14%,
+      #05E0CE 14%, #05E0CE 28%,
+      #fff 28%, #fff 42%,
+      #05E0CE 42%, #05E0CE 56%,
+      #fff 56%, #fff 70%,
+      #05E0CE 70%, #05E0CE 84%,
+      #fff 84%, #fff 100%
+    );
+  
+    transition: height .2s, border-width 0s .2s, width 0s .2s;
+  }
+  
+  button.print-button:hover {
+    cursor: pointer;
+  }
+  
+  button.print-button:hover .print-icon::before {
+    height:0px;
+    transition: height .2s;
+  }
+  button.print-button:hover .print-icon::after {
+    height:120%;
+    transition: height .2s .15s, border-width 0s .16s;
+  }
+  
+
+  @media(max-width:800px){
+    .btn-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 2em;
+      margin-top: -1em;
+  }
+  .receipt-item-wrap{
+    text-align: center;
+  }
+  .receipt-item-wrap h1{
+    font-size: 2.2em;
+  }
+  .receipt-item-wrap p{
+    margin: 1.6em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  }
+
+  .wrapper{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    opacity: 1;
+    z-index: 9999;
+  }
+  
+  
+  .custom-loader {
+    width:50px;
+    height:50px;
+    color: #02a597;
+    --c:radial-gradient(farthest-side,#02a597 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+  }
+  @keyframes s7 {
+    to{
+        transform: rotate(.5turn)
+    }
+  }
+  

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | MRJ's Online Shopping</title>
+    <script src="https://kit.fontawesome.com/655b3b7e45.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #1d364f;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .subheader {
+        color: #fff;
+      }
+      h1 {
+        color: #05e0ce;
+        font-size: 32px;
+      }
+      h2 {
+        color: #05e0ce;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      p {
+        color: #1d364f;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .feature img {
+        max-width: 100px;
+        margin-right: 20px;
+      }
+      .content-container {
+        text-align: center;
+      }
+      span {
+        color: #03a89b;
+      }
+      /* FOOTER */
+      .footer {
+        width: 100%;
+        /* background: #00121b; */
+        background: hsla(213, 77%, 14%, 1);
+        display: block;
+      }
+
+      .inner-footer {
+        width: 95%;
+        margin: auto;
+        padding: 30px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        justify-content: center;
+      }
+
+      .footer-items {
+        width: 25%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        color: #fff;
+      }
+
+      .footer-items p {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 25px;
+        color: #fff;
+      }
+
+      .footer-items h1 {
+        color: #fff;
+      }
+
+      .border1 {
+        height: 3px;
+        width: 40px;
+        background: #02a597;
+        color: #02a597;
+        background-color: #02a597;
+        border: 0px;
+      }
+
+      ul {
+        list-style: none;
+        margin-left: -2.6em;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+      }
+
+      ul a {
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        transition: 0.3s ease;
+      }
+
+      ul a:hover {
+        color: #02a597;
+        letter-spacing: 2px;
+      }
+
+      ul li {
+        margin: 10px 0;
+        height: 25px;
+      }
+
+      li i {
+        margin-right: 20px;
+      }
+
+      .social-media {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .social-media a {
+        text-decoration: none;
+      }
+
+      .social-media i {
+        height: 25px;
+        width: 25px;
+        margin: 20px 10px;
+        padding: 4px;
+        color: #fff;
+        transition: 0.5s;
+      }
+
+      .social-media i:hover {
+        transform: scale(1.5);
+      }
+
+      /* Bottom of the footer */
+      .footer-bottom {
+        padding: 10px;
+        background: hsla(213, 77%, 14%, 1);
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .back-icon-wrapper{
+        margin-left: -50em;
+      }
+
+      .back-link{
+        text-decoration: none;
+      }
+
+      .back-link .fa-house{
+        color: #ccc;
+      }
+
+      /* for tablet mode view */
+
+      @media screen and (max-width: 1275px) {
+        .footer-items {
+          width: 50%;
+        }
+      }
+
+      /* for mobile screen view */
+
+      @media screen and (max-width: 660px) {
+        .footer-items {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .list {
+          margin-left: -2.5em;
+        }
+        .listing {
+          margin-left: -2em;
+        }
+        .back-icon-wrapper{
+        margin-left: -17em;
+      }
+      }
+
+      /* Preloader */
+.wrapper{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    opacity: 1;
+    z-index: 9999;
+  }
+  
+  
+  .custom-loader {
+    width:50px;
+    height:50px;
+    color: #02a597;
+    --c:radial-gradient(farthest-side,#02a597 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+  }
+  @keyframes s7 {
+    to{
+        transform: rotate(.5turn)
+    }
+  }
+  .hidden{
+  opacity: 0; /*Making the elements visible*/
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show{
+  opacity: 1; /*will bring the opacity back to 1 */
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Preloader -->
+    <div class="wrapper">
+      <div class="custom-loader"></div>
+  </div>
+
+    <header>
+        <div class="back-icon-wrapper">
+            <a href="../index.html" class="back-link hidden">
+             <i class="fa-solid fa-house"></i>
+            </a>
+         </div>
+      <h1 class="hidden">About Us</h1>
+      <p class="subheader hidden">Welcome to MRJ's Online Shopping</p>
+    </header>
+
+    <div class="container">
+      <div class="content-container hidden">
+        <h2>What Sets Us Apart</h2>
+        <p>
+          At MRJ's Online Shopping, we are dedicated to providing you with a
+          seamless and enjoyable shopping experience.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img src="../img/userFriendly.jpg" alt="User-Friendly and Secure" />
+        <p>
+          <span>User-Friendly and Secure</span><br />
+          Our website is designed with you in mind, ensuring easy navigation and
+          a user-friendly interface. We prioritize your security, employing
+          state-of-the-art encryption methods to safeguard your personal and
+          payment information.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img src="../img/fastShipping.jpg" alt="Fast and Reliable Shipping" />
+        <p>
+          <span>Fast and Reliable Shipping</span><br />
+          We understand the importance of timely delivery. That's why we partner
+          with trusted shipping and transportation services to ensure your
+          orders reach you quickly and securely, no matter where you are.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img
+          src="../img/discountPrices.jpg"
+          alt="Discount Prices and In-App Purchase Rewards"
+        />
+        <p>
+          <span>Discount Prices and In-App Purchase Rewards</span><br />
+          Enjoy the latest fashion trends without breaking the bank. We offer
+          competitive prices and exciting discounts. Plus, our in-app purchase
+          rewards program allows you to earn points with every purchase, giving
+          you exclusive benefits and discounts.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img
+          src="../img/customerService.jpg"
+          alt="Exceptional Customer Service"
+        />
+        <p>
+          <span>Exceptional Customer Service</span><br />
+          Our dedicated customer service team is always ready to assist you.
+          Whether you have questions about products, need help with sizing, or
+          require post-purchase support, we are here to provide prompt and
+          helpful assistance.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img
+          src="../img/premiumClothing.jpg"
+          alt="Premium Clothing Fabric Quality"
+        />
+        <p>
+          <span>Premium Clothing Fabric Quality</span><br />
+          We are committed to quality. Our clothing selection is crafted from
+          premium fabrics, ensuring comfort, durability, and style. Each piece
+          is carefully curated to meet the highest standards of fashion and
+          comfort.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img
+          src="../img/workingEnvironment.jpg"
+          alt="Positive Working Environment"
+        />
+        <p>
+          <span>Positive Working Environment</span><br />
+          Behind every item we sell is a team of passionate individuals
+          dedicated to their craft. We foster a positive working environment,
+          ensuring our employees are motivated, valued, and inspired to bring
+          you the best fashion choices.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img
+          src="../img/swiftDelivery.jpeg"
+          alt="Swift Delivery Times and Secure Delivery"
+        />
+        <p>
+          <span>Swift Delivery Times and Secure Delivery</span><br />
+          Expect your orders to arrive promptly. We work tirelessly to minimize
+          delivery times, and our secure delivery methods guarantee that your
+          purchases reach you in pristine condition.
+        </p>
+      </div>
+
+      <div class="feature hidden">
+        <img
+          src="../img/commitment.jpeg"
+          alt="Commitment to Good Services and Customer Well-Being"
+        />
+        <p>
+          <span>Commitment to Good Services and Customer Well-Being</span><br />
+          Our commitment goes beyond selling clothes. We are dedicated to
+          providing exceptional services and ensuring your well-being. We
+          constantly strive to improve and exceed your expectations, making your
+          shopping experience with us truly memorable.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="inner-footer">
+        <!-- company name and description -->
+        <div class="footer-items hidden">
+          <h1>MRJ</h1>
+          <p>The Best Online Clothing Store.</p>
+        </div>
+
+        <!--  for quick links  -->
+        <div class="footer-items hidden">
+          <h3>Home</h3>
+          <div class="border1"></div>
+          <!--for the underline -->
+          <ul class="list">
+            <li><a href="../index.html">Home Page</a></li>
+            <li><a href="../components/blog.html">Blog</a></li>
+            <li><a href="../components/store.html">Store</a></li>
+            <li><a href="../components/delivery.html">Delivery</a></li>
+          </ul>
+        </div>
+
+        <!--  for some other links -->
+        <div class="footer-items hidden">
+          <h3>MRJ Help</h3>
+          <div class="border1"></div>
+          <!--for the underline -->
+          <ul class="list">
+            <li><a href="">How To Shop Online</a></li>
+            <li><a href="components/terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!--  for contact us info -->
+        <div class="footer-items hidden">
+          <h3>Contact us</h3>
+          <div class="border1"></div>
+          <ul class="listing hidden">
+            <li>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>Durban, KZN,
+              South Africa
+            </li>
+            <li>
+              <i class="fa fa-phone" aria-hidden="true"></i>+27 69 702 0214
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i
+              >mrjonlineclothing@gmail.com
+            </li>
+          </ul>
+
+          <!--   for social links -->
+          <div class="social-media hidden">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!--   Footer Bottom start  -->
+      <div class="footer-bottom hidden">
+        Copyright &copy; MRJ Online Clothing Store 2024.
+      </div>
+    </div>
+
+    <!--   Footer Bottom end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+      // PreLoader
+setTimeout(function(){
+    $('.wrapper').fadeToggle();
+}, 2600);
+
+//ON-SCROLL EFFECT
+//create the intersection observer
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry) => {   //it can observe multiple entries at the same time
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
+    });
+  });
+  //grab all the elements that have that specific class.
+  const hiddenElements = document.querySelectorAll('.hidden');
+  
+  //tell it what to observe
+  hiddenElements.forEach((el)=> observer.observe(el)); //Tell the observer to observe
+  
+
+     </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <!--Link to Font Awesome-->
+    <script src="https://kit.fontawesome.com/655b3b7e45.js" crossorigin="anonymous"></script>
+    <!--Link to stylesheet-->
+    <link rel="stylesheet" href="../css/store.css">
+</head>
+<body>
+
+      <!-- Pre Loader -->
+   <div class="wrapper">
+    <div class="custom-loader"></div>
+</div>
+
+
+    <main>
+        <nav class="navbar hidden">
+            <h1 class="navbar-logo"><span>M</span>RJ</h1>
+            <ul class="list">
+                <li><a href="../index.html">
+                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                </a></li>
+                <li><a href="./contact.html">
+                    <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                </a></li>
+                <li><a href="../components/blog.html">
+                    <i class="fa-solid fa-blog" style="color: #ffffff;"></i>
+                </a></li>
+                <li class="icon-con">
+                    <a href="#" id="cart-link">
+                    <i class="fa-solid fa-cart-shopping icon" style="color: #ffffff;"></i>  
+                    <p id="qty"></p>  
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    <section class="sidebar hidden">
+        <!-- Mens Section -->
+        <details class="hidden">
+            <summary>men</summary>
+
+        <label class="hidden">
+            <input type="checkbox" id="tshirtsCheckbox" onchange="filterClothing()">
+            T-Shirts
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="pantsCheckbox" onchange="filterClothing()">
+            jeans
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="jacketsCheckbox" onchange="filterClothing()">
+             jackets & jerseys
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="LongSleeveCheckbox" onchange="filterClothing()">
+             Long Sleeve Shirts
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="trackPantsCheckbox" onchange="filterClothing()">
+             Trackpants
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="headWearCheckbox" onchange="filterClothing()">
+             Headwear
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="watchCheckbox" onchange="filterClothing()">
+             Watches
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="sneakersCheckbox" onchange="filterClothing()">
+             Sneakers
+        </label>
+        </details>
+
+        <!-- Womens Section -->
+        <details class="hidden">
+            <summary>Women</summary>
+
+        <label class="hidden">
+             <input type="checkbox" id="WomensTshirtsCheckbox" onchange="filterClothing()">
+              T-Shirts 
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomenspantsCheckbox" onchange="filterClothing()">
+            jeans
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomensjacketsCheckbox" onchange="filterClothing()">
+             jackets & jerseys
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomensLongSleeveCheckbox" onchange="filterClothing()">
+             Long Sleeve Shirts
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomenstrackPantsCheckbox" onchange="filterClothing()">
+             Trackpants
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomensheadWearCheckbox" onchange="filterClothing()">
+             Headwear
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomenswatchCheckbox" onchange="filterClothing()">
+             Watches
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="WomenssneakersCheckbox" onchange="filterClothing()">
+             Sneakers
+        </label>
+
+        </details>
+
+        <!-- Kids Section -->
+        <details class="hidden">
+            <summary>Kids</summary>
+
+        <label class="hidden">
+            <input type="checkbox" id="kidstshirtsCheckbox" onchange="filterClothing()">
+            T-Shirts
+        </label>
+        <label class="hidden">
+            <input type="checkbox" id="kidsjacketsCheckbox" onchange="filterClothing()">
+             jackets & jerseys
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="kidsLongSleeveCheckbox" onchange="filterClothing()">
+             Long Sleeve Shirts
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="kidstrackPantsCheckbox" onchange="filterClothing()">
+             Trackpants
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="kidsheadWearCheckbox" onchange="filterClothing()">
+             Headwear
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="kidswatchCheckbox" onchange="filterClothing()">
+             Watches
+        </label>
+
+        <label class="hidden">
+            <input type="checkbox" id="kidssneakersCheckbox" onchange="filterClothing()">
+             Sneakers
+        </label>
+
+        </details>
+        
+        
+    </section>
+
+    <!-- <section class="cart"> -->
+      <!-- Cart items and total will be displayed here -->
+      <!-- <h1>Total : R 0.00</h1>
+  </section> -->
+  <div class="cart-container">
+    <div class="cart hidden">
+        <!-- Cart items will be displayed here -->
+        <h4>Total : R 0.00</h4>
+    </div>
+</div>
+
+
+    <section class="products" id="receipt-items">
+        <!-- Product items will be displayed here -->
+    </section>
+
+  
+
+    <div class="popup hidden">
+        <!-- Popup content will be displayed here -->
+    </div>
+    </main>
+
+    <!-- Footer -->
+<div class="footer">
+    <div class="inner-footer">
+  
+  <!-- company name and description -->
+      <div class="footer-items hidden">
+        <h1>MRJ</h1>
+        <p>The Best Online Clothing Store.</p>
+      </div>
+  
+  <!--  for quick links  -->
+      <div class="footer-items hidden">
+        <h3>Home</h3>
+        <div class="border1"></div> <!--for the underline -->
+          <ul>
+            <li><a href="../index.html">Home Page</a></li>
+            <li><a href="../components/blog.html">Blog</a></li>
+            <li><a href="../components/about.html">About Us</a></li>
+            <li><a href="../components/store.html">Store</a></li>
+            <li><a href="../components/delivery.html">Delivery</a></li>
+          </ul>
+      </div>
+  
+  <!--  for some other links -->
+      <div class="footer-items hidden">
+        <h3>MRJ Help</h3>
+        <div class="border1"></div>  <!--for the underline -->
+          <ul>
+            <li><a href="">How To Shop Online</a></li>
+            <li><a href="components/terms.html">Terms & Conditions</a></li>
+          </ul>
+      </div>
+  
+  <!--  for contact us info -->
+      <div class="footer-items hidden">
+        <h3>Contact us</h3>
+        <div class="border1"></div>
+          <ul class="listing">
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Durban, KZN, South Africa</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>+27 69 702 0214</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i>mrjonlineclothing@gmail.com</li>
+          </ul> 
+        
+  <!--   for social links -->
+          <div class="social-media hidden">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          </div> 
+      </div>
+    </div>
+    
+  <!--   Footer Bottom start  -->
+    <div class="footer-bottom hidden">
+      Copyright &copy; MRJ Online Clothing Store 2024.
+    </div>
+  </div>
+    
+  <!--   Footer Bottom end -->
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/store.js"></script>
+</body>
+</html>

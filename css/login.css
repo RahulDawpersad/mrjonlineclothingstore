@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #304D64;
+    height: 100vh;
+    margin: 0;
+}
+
+.form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #8a8484;
+    border-radius: 5px;
+    margin-left: 29em;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 18em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border: none;
+    margin-left: -0.3em;
+    border-radius: 3px;
+}
+
+.error-icon,
+.valid-icon {
+    display: none;
+    color: red;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.form-title{
+    color: #2496e2;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: -0.6em;
+}
+
+/* Preloader */
+.wrapper{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    opacity: 1;
+    z-index: 9999;
+  }
+  
+  
+  .custom-loader {
+    width:50px;
+    height:50px;
+    color: #02a597;
+    --c:radial-gradient(farthest-side,#02a597 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+  }
+  @keyframes s7 {
+    to{
+        transform: rotate(.5turn)
+    }
+  }
+
+  .btn-clear:hover{
+    color: #fff;
+   background: #02A597;
+  }
+
+@media (max-width:800px){
+    .form-title{
+        color: #3498db;
+    }
+    input{
+        color: #3498db;
+        background: #e9e6e6;
+    }
+    .form {
+        margin-left: 0;
+      }
+  }

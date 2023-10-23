@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRJ- Sign Up</title>
+    <!-- Link to Font Awesome -->
+    <script src="https://kit.fontawesome.com/655b3b7e45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="../css/module.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="wrapper">
+        <div class="custom-loader"></div>
+    </div>
+
+
+       <div id="signup-form" class="form">
+         <!-- Back icon -->
+         <div class="back-icon-wrapper">
+            <a href="../index.html">
+             <i class="fa-solid fa-arrow-left"></i>
+            </a>
+         </div>
+            <h1 class="form-title">Sign Up</h1>
+        <label for="email">Email:</label>
+        <input type="email" id="email" autocomplete="off">
+        <div class="icon-container">
+            <div id="email-error" class="error-icon">❌</div>
+            <div id="email-valid" class="valid-icon">✅</div>
+        </div>
+        <br>
+
+        <label for="password" class="tooltip"  data-text="At least 12 characters long but 14 or more is better.
+        A combination of uppercase letters, lowercase letters, numbers, and symbols."
+        >Password:</label>
+        <input type="password" id="password" />
+
+        <!-- Custom Tooltip -->
+       
+        <div class="pass-container">
+            <div id="password-error" class="error-icon">❌</div>
+            <div id="password-valid" class="valid-icon">✅</div>
+        </div>
+        <input type="checkbox" id="Show">Show Password
+        
+        <br>
+            <button id="btn-signup" class="btn-signup" disabled>Sign Up</button>
+        <button id="btn-clear" class="btn-clear">Clear</button>
+         <div class="account">
+            <p>Already Have an Account with MRJ?</p>
+            <div class="account-link">
+                <a href="login.html" class="link">Log In</a>
+            </div>
+         </div>
+         <div class="btn-container">
+            <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+                <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+                <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+                <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+              </svg>
+                Continue with Google
+              </button>
+         </div>
+    </div>
+
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/form.js"></script>
+</body>
+</html>

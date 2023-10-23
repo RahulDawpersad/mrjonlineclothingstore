@@ -1,0 +1,150 @@
+body {
+    background: #fdfdfd;
+     font-family: Arial, sans-serif;
+}
+
+.hidden{
+    opacity: 0; /*Making the elements visible*/
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+  }
+  
+  .show{
+    opacity: 1; /*will bring the opacity back to 1 */
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+
+/* Navigation Bar styles */
+header {
+    background: #162E47;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+iframe{
+    width: 100%;
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+}
+
+.back-icon-wrapper{
+    margin-left: -18em;
+    margin-top: 0.5em;
+}
+
+.fa-arrow-left{
+    color: #fff;
+}
+
+/* Location Card styles */
+.container {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.location {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #162E47;
+    transition: transform 0.3s;
+}
+
+.location:hover {
+    transform: scale(1.02);
+}
+
+.location-header{
+    color: #05b1a2;
+}
+
+p{
+    color: #162E47;
+}
+
+.heading{
+    color: #08ddcb;
+}
+
+h2 {
+    font-size: 24px;
+    color: #05b1a2;
+}
+
+address {
+    font-style: normal;
+    color: #fff;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Loader */
+.wrapper{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    opacity: 1;
+    z-index: 99999;
+  }
+  
+  
+  .custom-loader {
+    width:50px;
+    height:50px;
+    color: #02a597;
+    --c:radial-gradient(farthest-side,#02a597 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+  }
+  @keyframes s7 {
+    to{
+        transform: rotate(.5turn)
+    }
+  }
+  
+
+@media(max-width:800px){
+    header {
+        background: #162E47;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-left: -0.1em;
+        margin-top: -0.1em;
+    }
+    
+    iframe{
+        width: 370px;
+        margin-left: -0.1em;
+        margin-top: 0.2em;
+        border-radius: 2px;
+    }
+    .container {
+        max-width: 100%;
+        background: #fff;
+    }
+}
